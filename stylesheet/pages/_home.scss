@@ -1,0 +1,150 @@
+
+.content-container {
+    padding: 60px 0;
+}
+.content-panel {
+    width: calc(100% - 500px);
+    left: $fixed-panel-width;
+    position: relative;
+}
+
+.work-article  {
+    margin: 60px 0;
+    padding: 0 $site-padding;
+    .work-desc {
+        padding-right: 40px;
+        .subtitle {
+            color: $black50;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        .title {
+            margin: 10px 0;
+        }
+        .desc {
+            margin-top: 20px;
+        }
+    }
+    .work-img {
+        
+        // border-radius: 5px;
+        // box-shadow: $shadow-strong;
+        img {
+            width: 100%;
+           
+            &:not(.icon){
+                border: 1px solid #000;
+                border-radius: 5px;
+            }
+        }
+        position: relative;
+        margin: auto;
+        cursor: pointer;
+        &:hover {
+            .overlay {
+                opacity: 1;
+                transition: $transition-cubic;
+                transform: scale(1);
+            }
+        }
+
+        .overlay {
+            opacity: 0;
+            transform: scale(1.025);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 2px);
+            background: rgba($color: #000000, $alpha: .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+                width: 20px;
+            }
+
+            label {
+                color: $primary-color;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.padding-section {
+    margin: 80px 0;
+    padding: 60px $site-padding;
+    border-top: 0.5px solid #000;
+}
+//about section
+
+.about-section {
+    .about-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    p{
+        margin: 10px 0;
+    }
+    .subtitle {
+        color: $black50;
+    }
+    .main {
+        font-weight: 600;
+    }
+}
+.section-title {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.intro-wrapper{
+    // text-align: justify;
+    margin: 60px 0;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    
+}
+.edu-wrapper  {
+    margin-top: 60px;
+}
+.edu-item {
+    margin: 0px 0 50px 0;
+}
+
+//CONTACT
+.email-container {
+    .email {
+        margin-top: 10px;
+    }
+}
+.underline {
+    position: relative;
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        content: '';
+        height: 1px;
+        background: #000;
+    }
+}
+.contact-list-wrapper {
+    margin: 50px 0;
+}
+.contact-list {
+    margin-top: 20px;
+    .item {
+        padding: 5px 0;
+
+        span {
+            color: $black50;
+        }
+       
+    }
+}
+

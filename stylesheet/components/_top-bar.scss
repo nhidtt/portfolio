@@ -1,0 +1,52 @@
+.top-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-right: $site-padding - 10px;
+    padding-top: $site-padding-half;
+    z-index: 1000;
+}
+
+.connect-list {
+    display: flex;
+    .item {
+        margin: 0 5px;
+        img {
+            width: 20px;
+        }
+        
+    }
+    .item {
+        // border: .5px solid $primary-color;
+        cursor: pointer;
+        a {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &:hover {
+                &:after {
+                    opacity: .9;
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                border: 1px solid #000;
+                border-radius: 50%;
+                height: 100%;
+                width: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: $transition-cubic;
+                // z-index: 0;
+                opacity: 0;
+            }
+        }
+
+       
+    }
+}
