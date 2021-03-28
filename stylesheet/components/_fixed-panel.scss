@@ -1,16 +1,48 @@
+
+@media (max-width: $tablet){
+    .tablet {
+        display: none;
+    }
+}
+
+@media (min-width: $tablet){
+    .mobile {
+        display: none;
+    }
+}
+
 .fixed-panel {
-    position: fixed;
-    width: 500px;
-    border-right: 0.5px solid #000;
-    height: 100vh;
-    max-height: 100vh;
-    overflow-y: auto;
+   
+    // width: 500px;
     background: #fff;
-    padding-left: $site-padding;
-    padding-top: $site-padding-half;
-    padding-bottom: $site-padding-half;
-    padding-right: 20px;
+
+
     // position: relative;
+}
+
+
+@media (max-width: $tablet){
+    .fixed-panel {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+}
+
+
+@media (min-width: $tablet){
+    .fixed-panel {
+        border-right: 0.5px solid #000;
+        width: 30%;
+        position: fixed;
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: auto;
+        padding-top: $site-padding-half;
+        padding-bottom: $site-padding-half;
+        padding-left: $site-padding;
+        padding-right: 20px;
+    }
 }
 
 .branding {
@@ -26,11 +58,11 @@
 
     .main-intro {
 
-
         .main {
-            font-size: 1.25rem;
             line-height: 1.5;
+            
         }
+        
     }
 
     .sub-intro {
@@ -57,13 +89,15 @@
 }
 
 .menu-list-wrapper {
-    position: absolute;
-    bottom: $site-padding-half;
-    left: $site-padding;
+    // position: absolute;
+    // bottom: $site-padding-half;
+    // left: $site-padding;
+    margin-top: 120px;
     text-transform: uppercase;
 
     .item {
         line-height: 2;
+        cursor: pointer;
 
          &.active {
             

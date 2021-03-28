@@ -104,7 +104,7 @@
     max-width: 90%;
 }
 
-@media (max-width: $mobile){
+@media (max-width: $tablet){
     .col-1, .col-15, .col-2, .col-25, .col-3, .col-35, .col-4, .col-45, .col-5, .col-6, .col-65, .col-7, .col-75, .col-8, .col-9, .col-85 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -112,7 +112,7 @@
 }
 
 
-@media (max-width: $desktop){
+@media (max-width: $tablet){
      .col-6, .col-65, .col-7, .col-75, .col-8, .col-9, .col-85 {
         flex: 0 0 100%;
         max-width: 100%;

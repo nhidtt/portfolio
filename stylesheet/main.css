@@ -368,6 +368,36 @@ input {
   outline: none;
 }
 
+@media (max-width: 1000px) {
+  .brand-name {
+    font-size: 1.5rem;
+  }
+  .fixed-panel .intro-wrapper .main {
+    font-size: 1.25rem;
+  }
+  .fixed-panel .intro-wrapper .main .smaller {
+    font-size: 1rem;
+  }
+  .fixed-panel .intro-wrapper .sub {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .brand-name {
+    font-size: 1.5rem;
+  }
+  .fixed-panel .intro-wrapper .main {
+    font-size: 1.5rem;
+  }
+  .fixed-panel .intro-wrapper .main .smaller {
+    font-size: 1.25rem;
+  }
+  .fixed-panel .intro-wrapper .sub {
+    font-size: 1.25rem;
+  }
+}
+
 .container {
   max-width: 1180px;
   padding-left: 30px;
@@ -519,7 +549,7 @@ input {
   max-width: 90%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1000px) {
   .col-1, .col-15, .col-2, .col-25, .col-3, .col-35, .col-4, .col-45, .col-5, .col-6, .col-65, .col-7, .col-75, .col-8, .col-9, .col-85 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -528,7 +558,7 @@ input {
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1000px) {
   .col-6, .col-65, .col-7, .col-75, .col-8, .col-9, .col-85 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -655,7 +685,7 @@ input {
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 1000px) {
   .header .right-box {
     width: calc(100% - 80px);
   }
@@ -811,7 +841,7 @@ input {
   margin-right: 10px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .btn-large {
     padding: .6rem 2rem;
     font-size: 1rem;
@@ -989,7 +1019,7 @@ input {
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 1000px) {
   .modal-content {
     width: 95%;
   }
@@ -1027,18 +1057,43 @@ input {
   max-width: 700px;
 }
 
+@media (max-width: 1000px) {
+  .tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+}
+
 .fixed-panel {
-  position: fixed;
-  width: 500px;
-  border-right: 0.5px solid #000;
-  height: 100vh;
-  max-height: 100vh;
-  overflow-y: auto;
   background: #fff;
-  padding-left: 80px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-right: 20px;
+}
+
+@media (max-width: 1000px) {
+  .fixed-panel {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .fixed-panel {
+    border-right: 0.5px solid #000;
+    width: 30%;
+    position: fixed;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 20px;
+  }
 }
 
 .branding .brand-name {
@@ -1052,7 +1107,6 @@ input {
 }
 
 .intro-wrapper .main-intro .main {
-  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -1077,14 +1131,13 @@ input {
 }
 
 .menu-list-wrapper {
-  position: absolute;
-  bottom: 50px;
-  left: 80px;
+  margin-top: 120px;
   text-transform: uppercase;
 }
 
 .menu-list-wrapper .item {
   line-height: 2;
+  cursor: pointer;
 }
 
 .menu-list-wrapper .item.active a {
@@ -1169,22 +1222,42 @@ input {
   opacity: 0;
 }
 
-.content-container {
-  padding: 60px 0;
+@media (min-width: 1000px) {
+  .content-container {
+    padding: 60px 0;
+  }
 }
 
 .content-panel {
-  width: calc(100% - 500px);
-  left: 500px;
   position: relative;
 }
 
-.work-article {
-  margin: 60px 0;
-  padding: 0 80px;
+@media (min-width: 1000px) {
+  .work-article {
+    margin: 60px 0;
+    padding: 0 80px;
+  }
+  .work-article .desc {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .work-article {
+    margin: 50px 0;
+    padding: 0 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .work-article .work-desc {
+    margin-top: 20px;
+  }
 }
 
 .work-article .work-desc {
+  position: relative;
   padding-right: 40px;
 }
 
@@ -1198,8 +1271,8 @@ input {
   margin: 10px 0;
 }
 
-.work-article .work-desc .desc {
-  margin-top: 20px;
+.work-article .work-desc .desc .item {
+  line-height: 1.5;
 }
 
 .work-article .work-img {
@@ -1210,6 +1283,8 @@ input {
 
 .work-article .work-img img {
   width: 100%;
+  -webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 }
 
 .work-article .work-img img:not(.icon) {
@@ -1227,14 +1302,14 @@ input {
 
 .work-article .work-img .overlay {
   opacity: 0;
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: calc(100% - 2px);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1247,24 +1322,46 @@ input {
 }
 
 .work-article .work-img .overlay .icon {
-  width: 20px;
+  width: 16px;
 }
 
 .work-article .work-img .overlay label {
   color: #FFFCE6;
-  margin-left: 10px;
+  margin-left: 8px;
   cursor: pointer;
+  position: relative;
+}
+
+.work-article .work-img .overlay label:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  left: 0;
+  bottom: -5px;
+}
+
+@media (min-width: 1000px) {
+  .padding-section {
+    margin: 80px 0 0 0;
+    padding: 60px 80px 0 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .padding-section {
+    margin: 80px 0 80px 0;
+    padding: 50px 30px 0 30px;
+  }
 }
 
 .padding-section {
-  margin: 80px 0;
-  padding: 60px 80px;
   border-top: 0.5px solid #000;
 }
 
 .about-section .about-title {
   font-size: 1.5rem;
-  margin-bottom: 20px;
 }
 
 .about-section p {
@@ -1282,19 +1379,19 @@ input {
 .section-title {
   text-transform: uppercase;
   font-weight: 400;
+  margin-bottom: 50px;
 }
 
-.intro-wrapper {
-  margin: 60px 0;
-  font-size: 1.15rem;
+.about-text-wrapper {
+  margin: 50px 0;
   line-height: 1.5;
 }
 
 .edu-wrapper {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
-.edu-item {
+.edu-item:first-child {
   margin: 0px 0 50px 0;
 }
 
@@ -1314,6 +1411,27 @@ input {
   content: '';
   height: 1px;
   background: #000;
+}
+
+@media (max-width: 1000px) {
+  .about-title {
+    margin-bottom: 30px;
+  }
+  .about-section .edu-item:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+.skill-wrapper .title {
+  margin-top: 50px;
+}
+
+.skill-wrapper .skill-list-wrapper {
+  margin-top: 20px;
+}
+
+.skill-wrapper .skill-list-wrapper .item {
+  line-height: 1.75;
 }
 
 .contact-list-wrapper {

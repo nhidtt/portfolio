@@ -23,3 +23,41 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@media (max-width: $tablet){
+    .brand-name {
+        font-size: 1.5rem;
+    }
+    .fixed-panel {
+        .intro-wrapper {
+            .main {
+                font-size: 1.25rem;
+                .smaller {
+                    font-size: 1rem;
+                }
+            }
+            .sub {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet){
+    .brand-name {
+        font-size: 1.5rem;
+    }
+    .fixed-panel {
+        .intro-wrapper {
+            .main {
+                font-size: 1.5rem;
+                .smaller {
+                    font-size: 1.25rem;
+                }
+            }
+            .sub {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
